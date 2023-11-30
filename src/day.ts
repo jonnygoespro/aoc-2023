@@ -23,7 +23,7 @@ abstract class Day {
 
   async testInputPartTwo (): Promise<string> {
     const content = await fs.promises.readFile(`./inputs/day${this.id}/test.txt`)
-    const result = this.solveForPartOne(content.toString())
+    const result = this.solveForPartTwo(content.toString())
     return result
   }
 

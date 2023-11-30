@@ -6,11 +6,11 @@ class Day0 extends Day {
   }
 
   solveForPartOne (input: string): string {
-    return input
+    return 'not implemented yet'
   }
 
   solveForPartTwo (input: string): string {
-    return input
+    return 'not implemented yet'
   }
 }
 
