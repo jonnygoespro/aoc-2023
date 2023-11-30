@@ -1,28 +1,39 @@
-import fs from 'fs';
+import fs from 'fs'
 
 abstract class Day {
-    
-    id: number;
+  id: number
 
-    constructor(id: number){
-        this.id = id;
-    }
-    
-    async partOne(): Promise<string> {
-        const content = await fs.promises.readFile(`./inputs/day${this.id}/part1.txt`);
-        const result = this.solveForPartOne(content.toString());
-        return result;
-    }   
+  constructor (id: number) {
+    this.id = id
+  }
 
-    abstract solveForPartOne(input: string) : string;
+  async testInputPartOne (): Promise<string> {
+    const content = await fs.promises.readFile(`./inputs/day${this.id}/test.txt`)
+    const result = this.solveForPartOne(content.toString())
+    return result
+  }
 
-    async partTwo(): Promise<string> {
-        const content = await fs.promises.readFile(`./inputs/day${this.id}/part2.txt`);
-        const result = this.solveForPartTwo(content.toString());
-        return result;
-    }
+  async partOne (): Promise<string> {
+    const content = await fs.promises.readFile(`./inputs/day${this.id}/input.txt`)
+    const result = this.solveForPartOne(content.toString())
+    return result
+  }
 
-    abstract solveForPartTwo(input: string) : string;
+  abstract solveForPartOne (input: string): string
+
+  async testInputPartTwo (): Promise<string> {
+    const content = await fs.promises.readFile(`./inputs/day${this.id}/test.txt`)
+    const result = this.solveForPartOne(content.toString())
+    return result
+  }
+
+  async partTwo (): Promise<string> {
+    const content = await fs.promises.readFile(`./inputs/day${this.id}/input.txt`)
+    const result = this.solveForPartTwo(content.toString())
+    return result
+  }
+
+  abstract solveForPartTwo (input: string): string
 }
 
-export {Day};
+export { Day }
