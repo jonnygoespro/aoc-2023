@@ -7,27 +7,20 @@ class Day2 extends Day {
   }
 
   solveForPartOne (input: string): string {
-    const games = parseInput(input)
-    games.map((game) => calculatePossibility(game))
-
-    let sum = 0
-    games.forEach((game) => {
-      if (game.possible ?? false) {
-        sum += game.id
-      }
-    })
-    return sum.toString()
+    return parseInput(input)
+      .map((game) => calculatePossibility(game))
+      .filter((game) => game.possible ?? false)
+      .map((game) => game.id)
+      .reduce((a, b) => a + b, 0)
+      .toString()
   }
 
   solveForPartTwo (input: string): string {
-    const games = parseInput(input)
-    games.map((game) => calculateFewestCubes(game))
-
-    let sum = 0
-    games.forEach((game) => {
-      sum += game.fewestNumbers ?? 0
-    })
-    return sum.toString()
+    return parseInput(input)
+      .map((game) => calculateFewestCubes(game))
+      .map((game) => game.fewestNumbers ?? 0)
+      .reduce((a, b) => a + b, 0)
+      .toString()
   }
 }
 
