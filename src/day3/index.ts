@@ -1,5 +1,5 @@
 import { Day } from '../day'
-import { createArrayOfArraysContainingAdjacentNumbers, createGears } from './utils/functions'
+import { createSymbols } from './utils/functions'
 
 class Day3 extends Day {
   constructor () {
@@ -7,19 +7,17 @@ class Day3 extends Day {
   }
 
   solveForPartOne (input: string): string {
-    const array = createArrayOfArraysContainingAdjacentNumbers(input)
-    const sum = array.map((line: string[]) => line.map(char => char === '' ? '.' : char).join(''))
-      .map((line) => line.match(/[0-9]+/g)).flat().filter((line) => line !== null).reduce((a, b) => a + Number(b), 0)
-    return sum.toString()
+    const symbols = createSymbols(input)
+    const result = symbols.map(symbol => symbol.adjacentNumbers.reduce((a, b) => a + b, 0)).reduce((a, b) => a + b, 0)
+    return result.toString()
   }
 
   solveForPartTwo (input: string): string {
-    const array = createArrayOfArraysContainingAdjacentNumbers(input)
-    const gearsSum = createGears(array)
-      .map((gear) => gear.number1 * gear.number2)
+    const symbols = createSymbols(input)
+    const result = symbols.filter(symbol => symbol.adjacentNumbers.length === 2)
+      .map(symbol => symbol.adjacentNumbers.reduce((a, b) => a * b, 1))
       .reduce((a, b) => a + b, 0)
-
-    return gearsSum.toString()
+    return result.toString()
   }
 }
 
