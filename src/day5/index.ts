@@ -30,31 +30,39 @@ class Day5 extends Day {
   }
 
   solveForPartTwo (input: string): string {
-    let min: undefined | number
     const almanac = getAlmanac(input)
 
     const lines = input.split('\n\n')
     const numberArray = lines[0].split(':')[1].split(' ').filter((string) => string !== '').map((string) => Number(string))
 
-    for (let n = 0; n < numberArray.length; n += 2) {
-      for (let i = numberArray[n]; i < numberArray[n] + numberArray[n + 1] - 1; i++) {
-        let mappedNumber = i
-        almanac.maps.forEach((map) => {
-          for (let r = 0; r < map.ranges.length; r++) {
-            const range = map.ranges[r]
-            if (mappedNumber >= range.from && mappedNumber <= range.to) {
-              mappedNumber -= range.mapping
-              break
-            }
+    let lowestIndex = 0
+    let minWasFound = false
+    while (!minWasFound) {
+      let mappedNumber = lowestIndex
+      for (let m = almanac.maps.length - 1; m >= 0; m--) {
+        const map = almanac.maps[m]
+
+        for (let r = map.ranges.length - 1; r >= 0; r--) {
+          const range = map.ranges[r]
+          if (mappedNumber + range.mapping >= range.from && mappedNumber + range.mapping <= range.to) {
+            mappedNumber += range.mapping
+            break
           }
-        })
-        if (min === undefined || mappedNumber < min) {
-          min = mappedNumber
         }
+      }
+
+      for (let n = 0; n < numberArray.length; n += 2) {
+        if (mappedNumber >= numberArray[n] && mappedNumber <= numberArray[n] + numberArray[n + 1] - 1) {
+          minWasFound = true
+        }
+      }
+
+      if (!minWasFound) {
+        lowestIndex++
       }
     }
 
-    return min?.toString() ?? 'no min found'
+    return lowestIndex.toString()
   }
 }
 
