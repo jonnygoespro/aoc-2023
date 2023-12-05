@@ -17,15 +17,21 @@ const days: Day[] = [
 ]
 
 async function runDay (dayId: number): Promise<void> {
+  const startDatePart1 = Date.now()
   const resultPart1 = await days[dayId].partOne()
+  const endDatePart1 = Date.now()
   console.log('Part 1 result:\n')
   console.log(resultPart1)
+  console.log(`Execution time: ${endDatePart1 - startDatePart1} ms`)
 
   console.log('\n')
 
+  const startDatePart2 = Date.now()
   const resultPart2 = await days[dayId].partTwo()
+  const endDatePart2 = Date.now()
   console.log('Part 2 result:\n')
   console.log(resultPart2)
+  console.log(`Execution time: ${endDatePart2 - startDatePart2} ms`)
 }
 
 console.log('\n\n\n   ADVENT OF CODE 2023 \n\n')
