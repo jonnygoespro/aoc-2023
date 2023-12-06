@@ -1,5 +1,5 @@
 import { Day } from '../day'
-import { calculateVictoryRuns, parseInputPart1, parseInputPart2 } from './utils/functions'
+import { calculateVictoryRunsMathematically, parseInputPart1, parseInputPart2 } from './utils/functions'
 
 class Day6 extends Day {
   constructor () {
@@ -10,7 +10,7 @@ class Day6 extends Day {
     const races = parseInputPart1(input)
 
     races.forEach((race) => {
-      race.victoryRuns = calculateVictoryRuns(race)
+      race.victoryRuns = calculateVictoryRunsMathematically(race)
     })
 
     const result = races.map(race => race.victoryRuns).reduce((a, b) => a * b, 1)
@@ -19,7 +19,7 @@ class Day6 extends Day {
 
   solveForPartTwo (input: string): string {
     const race = parseInputPart2(input)
-    race.victoryRuns = calculateVictoryRuns(race)
+    race.victoryRuns = calculateVictoryRunsMathematically(race)
     return race.victoryRuns.toString()
   }
 }

@@ -1,3 +1,4 @@
+import { quadraticFormula } from '../../helpers/functions'
 import { Race } from '../models/models'
 
 export const parseInputPart1 = (input: string): Race[] => {
@@ -30,10 +31,17 @@ export const parseInputPart2 = (input: string): Race => {
   }
 }
 
-export const calculateVictoryRuns = (race: Race): number => {
+export const calculateVictoryRunsBruteForce = (race: Race): number => {
   let victoryRuns = 0
   for (let secondsHolding = 1; secondsHolding < race.duration; secondsHolding++) {
     victoryRuns += ((race.duration - secondsHolding) * secondsHolding) > race.record ? 1 : 0
   }
   return victoryRuns
+}
+
+export const calculateVictoryRunsMathematically = (race: Race): number => {
+  const bounds = quadraticFormula(-1, race.duration, -race.record)
+  const bound1 = (bounds[0] % 1 === 0) ? bounds[0] + 1 : Math.ceil(bounds[0])
+  const bound2 = Math.ceil(bounds[1])
+  return bound2 - bound1
 }
