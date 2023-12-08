@@ -1,5 +1,5 @@
 export interface Node {
-    symbol: string
-    L: string,
-    R: string
-} 
+  symbol: string
+  L: string
+  R: string
+}

@@ -11,3 +11,17 @@ export const quadraticFormula = (a: number, b: number, c: number): number[] => {
 
   return results
 }
+
+const greatestCommonDivisor = (a: number, b: number): number => {
+  for (let temp = b; b !== 0;) {
+    b = a % b
+    a = temp
+    temp = b
+  }
+  return a
+}
+
+export const lowestCommonMultiplier = (a: number, b: number): number => {
+  const gcdValue = greatestCommonDivisor(a, b)
+  return (a * b) / gcdValue
+}
