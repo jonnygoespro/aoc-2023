@@ -9,6 +9,7 @@ import day6 from './day6/index'
 import day7 from './day7/index'
 import day8 from './day8/index'
 import day9 from './day9/index'
+import day10 from './day10/index';
 // MORE IMPORTS HERE
 const days: Day[] = [
   day0,
@@ -21,7 +22,8 @@ const days: Day[] = [
   day7,
   day8,
   day9
-  // MORE DAYS HERE
+  ,day10,
+    // MORE DAYS HERE
 ]
 
 async function runDay (dayId: number): Promise<void> {
