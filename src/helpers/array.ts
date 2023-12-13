@@ -9,3 +9,7 @@ export const create2dArrayOfNumbers = (input: string): number[][] => {
 export const neighborExists = (width: number, height: number, neighborY: number, neighborX: number): boolean => {
   return !(neighborX < 0 || neighborX >= width || neighborY < 0 || neighborY >= height)
 }
+
+export const transposeMatrix = (matrix: string[][]): string[][] => {
+  return matrix[0].map((_, i) => matrix.map(row => row[i]))
+}
