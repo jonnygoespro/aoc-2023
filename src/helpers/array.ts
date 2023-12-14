@@ -13,3 +13,9 @@ export const neighborExists = (width: number, height: number, neighborY: number,
 export const transposeMatrix = (matrix: string[][]): string[][] => {
   return matrix[0].map((_, i) => matrix.map(row => row[i]))
 }
+
+export const rotateMatrixLeft = (matrix: string[][]): string[][] => {
+  const reversedMatrix = matrix.slice().reverse()
+  const rotatedMatrix = transposeMatrix(reversedMatrix)
+  return rotatedMatrix
+}
