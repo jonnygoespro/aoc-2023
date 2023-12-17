@@ -6,6 +6,10 @@ export const create2dArrayOfNumbers = (input: string): number[][] => {
   return input.split('\n').map((line) => line.split(' ').filter((string) => string !== '').map((string) => Number(string)))
 }
 
+export const create2dArrayOfSingleDigitNumbers = (input: string): number[][] => {
+  return input.split('\n').map((line) => line.split('').filter((string) => string !== '').map((string) => Number(string)))
+}
+
 export const neighborExists = (width: number, height: number, neighborY: number, neighborX: number): boolean => {
   return !(neighborX < 0 || neighborX >= width || neighborY < 0 || neighborY >= height)
 }
