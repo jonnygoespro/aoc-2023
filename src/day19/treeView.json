@@ -1,0 +1,215 @@
+{
+    "name": "in",
+    "instructions": [
+        {
+            "element": "s",
+            "operation": "<",
+            "amount": 1351,
+            "destination": "px",
+            "name": "in0",
+            "instructions": [
+                {
+                    "element": "a",
+                    "operation": "<",
+                    "amount": 2006,
+                    "destination": "qkq",
+                    "name": "px0",
+                    "instructions": [
+                        {
+                            "element": "x",
+                            "operation": "<",
+                            "amount": 1416,
+                            "destination": "A",
+                            "name": "qkq0",
+                            "instructions": []
+                        },
+                        {
+                            "element": "crn",
+                            "operation": "",
+                            "amount": null,
+                            "name": "qkq1",
+                            "instructions": [
+                                {
+                                    "element": "x",
+                                    "operation": ">",
+                                    "amount": 2662,
+                                    "destination": "A",
+                                    "name": "crn0",
+                                    "instructions": []
+                                },
+                                {
+                                    "element": "R",
+                                    "operation": "",
+                                    "amount": null,
+                                    "name": "crn1",
+                                    "instructions": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "element": "m",
+                    "operation": ">",
+                    "amount": 2090,
+                    "destination": "A",
+                    "name": "px1",
+                    "instructions": []
+                },
+                {
+                    "element": "rfg",
+                    "operation": "",
+                    "amount": null,
+                    "name": "px2",
+                    "instructions": [
+                        {
+                            "element": "s",
+                            "operation": "<",
+                            "amount": 537,
+                            "destination": "gd",
+                            "name": "rfg0",
+                            "instructions": [
+                                {
+                                    "element": "a",
+                                    "operation": ">",
+                                    "amount": 3333,
+                                    "destination": "R",
+                                    "name": "gd0",
+                                    "instructions": []
+                                },
+                                {
+                                    "element": "R",
+                                    "operation": "",
+                                    "amount": null,
+                                    "name": "gd1",
+                                    "instructions": []
+                                }
+                            ]
+                        },
+                        {
+                            "element": "x",
+                            "operation": ">",
+                            "amount": 2440,
+                            "destination": "R",
+                            "name": "rfg1",
+                            "instructions": []
+                        },
+                        {
+                            "element": "s",
+                            "operation": ">",
+                            "amount": 536,
+                            "destination": "A",
+                            "name": "rfg2",
+                            "instructions": []
+                        },
+                        {
+                            "element": "x",
+                            "operation": "<",
+                            "amount": 2441,
+                            "destination": "A",
+                            "name": "rfg2",
+                            "instructions": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "element": "qqz",
+            "operation": "",
+            "amount": null,
+            "name": "in1",
+            "instructions": [
+                {
+                    "element": "s",
+                    "operation": ">",
+                    "amount": 2770,
+                    "destination": "qs",
+                    "name": "qqz0",
+                    "instructions": [
+                        {
+                            "element": "s",
+                            "operation": ">",
+                            "amount": 3448,
+                            "destination": "A",
+                            "name": "qs0",
+                            "instructions": []
+                        },
+                        {
+                            "element": "lnx",
+                            "operation": "",
+                            "amount": null,
+                            "name": "qs1",
+                            "instructions": [
+                                {
+                                    "element": "m",
+                                    "operation": ">",
+                                    "amount": 1548,
+                                    "destination": "A",
+                                    "name": "lnx0",
+                                    "instructions": []
+                                },
+                                {
+                                    "element": "m",
+                                    "operation": "<",
+                                    "amount": 1549,
+                                    "destination": "A",
+                                    "name": "lnx1",
+                                    "instructions": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "element": "m",
+                    "operation": "<",
+                    "amount": 1801,
+                    "destination": "hdj",
+                    "name": "qqz1",
+                    "instructions": [
+                        {
+                            "element": "m",
+                            "operation": ">",
+                            "amount": 838,
+                            "destination": "A",
+                            "name": "hdj0",
+                            "instructions": []
+                        },
+                        {
+                            "element": "pv",
+                            "operation": "",
+                            "amount": null,
+                            "name": "hdj1",
+                            "instructions": [
+                                {
+                                    "element": "a",
+                                    "operation": ">",
+                                    "amount": 1716,
+                                    "destination": "R",
+                                    "name": "pv0",
+                                    "instructions": []
+                                },
+                                {
+                                    "element": "a",
+                                    "operation": "<",
+                                    "amount": 1717,
+                                    "destination": "A",
+                                    "name": "pv1",
+                                    "instructions": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "element": "R",
+                    "operation": "",
+                    "amount": null,
+                    "name": "qqz2",
+                    "instructions": []
+                }
+            ]
+        }
+    ]
+}
