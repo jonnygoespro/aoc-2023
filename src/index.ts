@@ -19,6 +19,8 @@ import day16 from './day16/index'
 import day17 from './day17/index'
 import day18 from './day18/index'
 import day19 from './day19/index'
+import day20 from './day20/index'
+import day21 from './day21/index'
 // MORE IMPORTS HERE
 const days: Day[] = [
   day0,
@@ -40,7 +42,9 @@ const days: Day[] = [
   day16,
   day17,
   day18,
-  day19
+  day19,
+  day20,
+  day21
   // MORE DAYS HERE
 ]
 
