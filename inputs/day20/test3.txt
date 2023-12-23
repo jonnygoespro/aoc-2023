@@ -1,0 +1,3 @@
+broadcaster -> aa, aa
+%aa -> bb
+&bb -> rx

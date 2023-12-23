@@ -7,6 +7,7 @@
     "build": "rimraf ./build && tsc",
     "test": "jest",
     "test:day": "jest --testPathPattern=src/day$1/day$1.spec.ts",
+    "test:20": "jest --testPathPattern=src/day20/day20.spec.ts",
     "setup": "node src/setup.js",
     "start": "npm run build && node build/index.js",
     "lint": "ts-standard",
